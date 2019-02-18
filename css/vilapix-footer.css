@@ -1,0 +1,74 @@
+footer {
+	padding-top: 30px;
+	background: #f8f9fa;
+	width: 100%;
+	min-height: 120px;
+	bottom: 0;
+	display: block;
+}
+
+footer div.container {
+	min-width: 1140px;
+}
+
+footer .col-logo {
+	padding-top: 10px;
+	text-align: center;
+}
+
+footer .col-4 ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+footer .col-4 li {
+	display: inline;
+}
+
+footer .col-6 ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+footer .col-6 li {
+	display: inline;
+}
+
+footer .col-options li a {
+	display: inline-block;
+	text-align: center;
+	padding: 20px 16px;
+	text-decoration: none;
+	color: #00afef;
+	font-family: "GoogleSans","Roboto",Arial,Helvetica,sans-serif;
+}
+
+footer.pc-mobile-xl .col-options li a:hover {
+	color: #ea258f;
+}
+
+footer .col-redes-sociais {
+	padding-left: 100px;
+}
+
+footer .col-redes-sociais a {
+	margin-top: 9px;
+	display: inline-block;
+	text-align: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50px;
+	background-color: #555;
+	color: white;
+	font-size: 26px;
+}
+footer.pc-mobile-xl .col-redes-sociais a:hover{
+	content: "";
+    background: #a64bf4;
+    background: -webkit-linear-gradient(45deg,#00dbde,#fc00ff);
+    background: -o-linear-gradient(45deg,#00dbde,#fc00ff);
+    background: -moz-linear-gradient(45deg,#00dbde,#fc00ff);
+    background: linear-gradient(45deg,#00dbde,#fc00ff);
+}

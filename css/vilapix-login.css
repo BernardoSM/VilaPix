@@ -1,0 +1,255 @@
+header, footer {
+	display: none;
+}
+
+.mobile, .mobile-xs {
+	display: none;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+}
+
+#background {
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: fixed;
+	background: #a64bf4;
+    background: -webkit-linear-gradient(45deg,#00dbde,#fc00ff);
+    background: -o-linear-gradient(45deg,#00dbde,#fc00ff);
+    background: -moz-linear-gradient(45deg,#00dbde,#fc00ff);
+    background: linear-gradient(45deg,#00dbde,#fc00ff);
+}
+
+#bloco-login {
+	background-color: #fff;
+	color: #663399;
+	width: 500px;
+	height: 500px;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	top: 50%;
+	box-shadow: 0 2px 6px 0 rgba(0,0,0,0.12), inset 0 -1px 0 0 #dadce0;
+	border-radius: 5px;
+}
+
+#bloco-login .row-button-toggle{
+	display: block;
+    background-color: white;
+}
+
+#bloco-login .row-button-toggle .row{
+	margin: 0;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-bottom: 10px;
+}
+
+#bloco-login .row-button-toggle .row a{
+	text-decoration: none;
+}
+
+#bloco-login .row-button-toggle .row-entrarcom{
+	font-family: "GoogleSans","Roboto",Arial,Helvetica,sans-serif;
+	color: #555;
+	margin-bottom: 0;
+	font-size: 26px;
+	margin-top: 35px;
+	margin-bottom: 20px;
+}
+
+#bloco-login .row-button-toggle .row-entrarcom p {
+	margin-bottom: 0;
+	text-align: center;
+	width: 100%;
+}
+
+.btn-face, .btn-google, .btn-entrar, .btn-hidden{
+	font-family: "GoogleSans-Bold","Roboto",Arial,Helvetica,sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 5px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,.2);
+    -o-box-shadow: 0 1px 5px 0 rgba(0,0,0,.2);
+    -ms-box-shadow: 0 1px 5px 0 rgba(0,0,0,.2);
+    position: relative;
+}
+
+#bloco-login .row-button-toggle .row-facebook .col{
+	padding: 0;
+}
+
+#bloco-login .row-button-toggle .row .btn-hidden {
+	width: 210px;
+    padding: 0;
+    position: absolute;
+}
+
+#bloco-login .row-button-toggle .row .btn-hidden a {
+    opacity: 1;
+}
+
+#bloco-login .row-button-toggle .row .btn-face{
+	width: 210px;
+    transition: opacity 0.4s;
+    color: #fff;
+    background-color: #3b5998;
+    opacity: 0;
+}
+#bloco-login .row-button-toggle .row .btn-face:hover{
+	opacity: 1;
+    background: -webkit-linear-gradient(45deg,#00dbde,#fc00ff);
+    background: -o-linear-gradient(45deg,#00dbde,#fc00ff);
+    background: -moz-linear-gradient(45deg,#00dbde,#fc00ff);
+    background: linear-gradient(45deg,#00dbde,#fc00ff);
+}
+
+#bloco-login .row-button-toggle .row .btn-face i{
+	font-size: 20px;
+	margin-right: 5px;
+}
+
+#bloco-login .row-button-toggle .row .btn-hidden-g {
+	width: 100%;
+    padding: 0;
+    position: absolute;
+}
+
+#bloco-login .row-button-toggle .row .btn-hidden-g a {
+    opacity: 1;
+    float: right;
+}
+
+#bloco-login .row-button-toggle .row .btn-google{
+	float: right;
+	width: 210px;
+    transition: opacity 0.4s;
+    color: #555;
+    background-color: #fff;
+    opacity: 0;
+}
+#bloco-login .row-button-toggle .row .btn-google:hover{
+	opacity: 1;
+	color: #fff;
+    background: -webkit-linear-gradient(45deg,#00dbde,#fc00ff);
+    background: -o-linear-gradient(45deg,#00dbde,#fc00ff);
+    background: -moz-linear-gradient(45deg,#00dbde,#fc00ff);
+    background: linear-gradient(45deg,#00dbde,#fc00ff);
+}
+
+#bloco-login .row-button-toggle .row .btn-google img{
+	height: 20px;
+	margin-right: 5px;
+}
+
+.row-login, .row-senha{
+	color: #555;
+	font-family: "GoogleSans","Roboto",Arial,Helvetica,sans-serif;
+}
+
+.row-senha .forgot {
+	font-size: 12px;
+	color: #555;
+	position: relative;
+	top: 3px;
+	left: 7px;
+}
+
+.row-senha .forgot:hover {
+	color: #ea258f;
+}
+
+#bloco-login .row-button-toggle input{
+	font-family: "GoogleSans","Roboto",Arial,Helvetica,sans-serif;
+    width: 100%;
+    height: 51px;
+    position: relative;
+    background-color: #f7f7f7;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#bloco-login .row-button-toggle input:focus{
+	border-width: 1px;
+	border-radius: 10px;
+	border-color: #00afef;
+	transition: 0.5s;
+	outline: none;
+	transition: 1s;
+}
+
+#bloco-login .row-button-toggle .row .btn-hidden-entrar {
+    padding: 0;
+    position: absolute;
+    width: 440px;
+}
+
+#bloco-login .row-button-toggle .row .btn-hidden-entrar button {
+    opacity: 1;
+    float: right;
+}
+
+#bloco-login .row-button-toggle .row .btn-entrar{
+	color: #fff;
+    background-color: #555;
+    cursor: pointer;
+    border: 0;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: opacity 0.4s;
+    opacity: 0;
+}
+#bloco-login .row-button-toggle .row .btn-entrar:hover{
+	opacity: 1;
+    background: #a64bf4;
+    background: -webkit-linear-gradient(45deg,#00dbde,#fc00ff);
+    background: -o-linear-gradient(45deg,#00dbde,#fc00ff);
+    background: -moz-linear-gradient(45deg,#00dbde,#fc00ff);
+    background: linear-gradient(45deg,#00dbde,#fc00ff);
+}
+
+#bloco-login .row-button-toggle .row-tornarmembro{
+	font-family: "GoogleSans","Roboto",Arial,Helvetica,sans-serif;
+	color: #555;
+	margin-bottom: 0;
+	font-size: 12px;
+	margin-top: 20px;
+}
+
+#bloco-login .row-button-toggle .row-tornarmembro p {
+	margin-bottom: 0;
+	text-align: center;
+	width: 100%;
+}
+
+#bloco-login .row-button-toggle .row-tornarmembro a {
+	margin-bottom: 0;
+	text-align: center;
+	width: 100%;
+	color: #555;
+}
+#bloco-login .row-button-toggle .row-tornarmembro a:hover {
+	color: #ea258f;
+}
+
+#bloco-login .row-button-toggle .row-logo{
+	margin-top: 16px;
+	display: block;
+	position: relative;
+	text-align: center;
+}

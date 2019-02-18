@@ -1,0 +1,84 @@
+/* Tamanho padrão para tablets */
+@media only screen and (max-width: 1050px) {
+
+	/* FOOTER DO SITE */
+	footer .col-options {
+		min-width: 300px;
+		flex: 0;
+	}
+
+	footer .col-redes-sociais {
+		padding-left: 0;
+	}
+
+}
+
+
+/* Tamanho padrão para smartphones */
+@media only screen and (max-width: 600px) {
+	.pc-site, .pc-mobile-xl {
+		display: none;
+	}
+
+	.mobile-xs {
+		display: block;
+	}
+
+	footer {
+		padding-top: 0;
+	}
+
+	footer div.container {
+		min-width: 0;
+	}
+
+	footer .container .row {
+		display: block;
+	}
+
+	footer .col-options{
+		margin-top: 10px;
+		margin-bottom: 10px;
+		text-align: center;
+		min-width: 0;
+	}
+
+	footer .col-options li a {
+		display: block;
+		text-align: center;
+		padding: 0;
+		text-decoration: none;
+		color: #00afef;
+		font-family: "GoogleSans","Roboto",Arial,Helvetica,sans-serif;
+	}
+	footer .col-options li a:focus {
+		background-color: #f1f2f6;
+	}
+
+	footer .col-redes-sociais {
+		margin-bottom: 10px;
+		text-align: center;
+	}
+
+	footer .row ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	footer .col-redes-sociais ul li {
+		display: inline;
+	}
+
+	footer .col-redes-sociais li a {
+		content: "";
+	    background: #a64bf4;
+	    background: -webkit-linear-gradient(45deg,#00dbde,#fc00ff);
+	    background: -o-linear-gradient(45deg,#00dbde,#fc00ff);
+	    background: -moz-linear-gradient(45deg,#00dbde,#fc00ff);
+	    background: linear-gradient(45deg,#00dbde,#fc00ff);
+	}
+	footer .col-redes-sociais li a:focus {
+		background: #555;
+	}
+}

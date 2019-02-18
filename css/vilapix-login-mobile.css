@@ -1,0 +1,70 @@
+@media only screen and (max-width: 600px) {
+	#background {
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+
+	#bloco-login {
+		min-width: 300px;
+		width: 97%;
+	}
+
+	#bloco-login .row-button-toggle .row {
+	    margin-bottom: 0;
+	}
+
+	#bloco-login .row-button-toggle .row-entrarcom {
+	    font-family: "GoogleSans","Roboto",Arial,Helvetica,sans-serif;
+	    color: #555;
+	    margin-bottom: 0;
+	    font-size: 20px;
+	    margin-top: 10px;
+	    margin-bottom: 10px;
+	}
+
+	#bloco-login .row-button-toggle {
+	    display: block;
+	    background-color: white;
+	}
+
+	.btn-hidden, .btn-hidden-entrar{
+		display: none;
+	}
+
+	#bloco-login .row-button-toggle .row-facebook{
+		display: block;
+	}
+
+	#bloco-login .row-button-toggle .row-facebook .btn-face{
+		width: 100%;
+		opacity: 1;
+		margin-bottom: 10px;
+	}
+
+	#bloco-login .row-button-toggle .row-facebook .btn-google{
+		width: 100%;
+		opacity: 1;
+		margin-bottom: 10px;
+	}
+
+	.row-login, .row-senha {
+		font-size: 16px;
+	}
+
+	.row-senha .forgot {
+	    font-size: 14px;
+	    color: #555;
+	    position: relative;
+	    top: 2px;
+	    left: 7px;
+	}
+
+	#bloco-login .row-button-toggle .row-entrar .btn-entrar{
+		width: 100%;
+		opacity: 1;
+	}
+
+	#bloco-login .row-button-toggle .row-tornarmembro p{
+		font-size: 14px;
+	}
+}
