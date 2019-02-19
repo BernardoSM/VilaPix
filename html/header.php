@@ -4,9 +4,18 @@
 	<title>VilaPix</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1" author="Bernardo Simonassi">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	<!-- SCRIPT JQUERY E BOOSTRAP COM POPPER-->
+	<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+	<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+	<!-- CSS BOOSTRAP, FONTAWESOME E W3SCHOOLS-->
 	<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	<!-- CSS DOS ARQUIVOS -->
 	<link rel="stylesheet" type="text/css" href="css/vilapix-header.css">
 	<link rel="stylesheet" type="text/css" href="css/vilapix-header-mobile.css">
 	<link rel="stylesheet" type="text/css" href="css/vilapix-footer.css">

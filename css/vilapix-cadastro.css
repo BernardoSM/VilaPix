@@ -7,10 +7,28 @@ header, footer {
 }
 
 .hidden {
-    visibility: hidden;
+    display: none;
 }
 
-.popover-body {
+#char8-string {
+    color: #EA2027;
+    font-family: "GoogleSans-Bold","Roboto",Arial,Helvetica,sans-serif;
+    font-size: 14px;
+}
+
+#ucase-string {
+    color: #EA2027;
+    font-family: "GoogleSans-Bold","Roboto",Arial,Helvetica,sans-serif;
+    font-size: 14px;
+}
+
+#n-string {
+    color: #EA2027;
+    font-family: "GoogleSans-Bold","Roboto",Arial,Helvetica,sans-serif;
+    font-size: 14px;
+}
+
+#confirm-password {
     color: #EA2027;
     font-family: "GoogleSans-Bold","Roboto",Arial,Helvetica,sans-serif;
     font-size: 14px;

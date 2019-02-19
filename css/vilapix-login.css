@@ -39,6 +39,7 @@ body {
 #bloco-login .row-button-toggle{
 	display: block;
     background-color: white;
+    border-radius: 5px;
 }
 
 #bloco-login .row-button-toggle .row{

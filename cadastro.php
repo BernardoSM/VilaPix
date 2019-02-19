@@ -5,8 +5,13 @@ require_once("html".DIRECTORY_SEPARATOR."header.php"); ?>
 <html>
 
 <head>
+    <!-------------SCRIPT DE MÁSCARAS---------------->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+	
 	<link rel="stylesheet" type="text/css" href="css/vilapix-cadastro.css">
 	<link rel="stylesheet" type="text/css" href="css/vilapix-cadastro-mobile.css">
+
+    
     
 </head>
 <body>
@@ -29,7 +34,7 @@ require_once("html".DIRECTORY_SEPARATOR."header.php"); ?>
 		    			Senha <input required tabindex="3" id="senha" type="password" name="password" minlength="6" data-toggle="popover" data-trigger="focus" data-popover-content="#senha-popover">
 		    		</div>
 					<div class="row row-senha validar-senha">
-		    			Confirmar Senha <input required tabindex="4" id="confirmarsenha" type="password" name="confirm-password" minlength="6" data-toggle="popover" data-trigger="focus" data-popover-content="#confirmarsenha-popover">
+		    			Confirmar Senha <input required tabindex="4" id="confirmarsenha" type="password" name="confirmarsenha" minlength="6" data-toggle="popover" data-trigger="focus" data-popover-content="#confirmarsenha-popover">
 		    		</div>
 				</div>
 			</div>
@@ -78,25 +83,21 @@ require_once("html".DIRECTORY_SEPARATOR."header.php"); ?>
 
 	<div id="senha-popover" class="hidden">
 	    <div class="popover-body">
-	    	<span class="8char"><i id="8char" class="fas fa-times-circle"></i> 8 Caracteres<br></span>
-	    	<i class="fas fa-times-circle"></i> Letra Maiúscula<br>
-	    	<i class="fas fa-times-circle"></i> Número
+	    	<span id="char8-string"><i id="8char" class="fas fa-times-circle"></i> 8 Caracteres<br></span>
+	    	<span id="ucase-string"><i id="uCase" class="fas fa-times-circle"></i> Letra Maiúscula<br></span>
+	    	<span id="n-string"><i id="nCase" class="fas fa-times-circle"></i> Número</span>
 	    </div>
 	</div>  
 
 	<div id="confirmarsenha-popover" class="hidden">
 	    <div class="popover-body">
-	    	<i class="fas fa-times-circle"></i> Mesma senha
+	    	<span id="confirm-password"><i id="pwmatch" class="fas fa-times-circle"></i> Mesma senha</span>
 	    </div>
 	</div> 
 </body>
 
 
-
-<script src="lib/jquery/jquery.min.js"></script>
-
-<!-------------SCRIPT DE MÁSCARAS---------------->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+<!-------------INICIO DO SCRIPT DE MÁSCARAS---------------->
 <script>
 	//MASCARA CPF/CNPJ
 	var cpfMascara = function (val) {
@@ -126,6 +127,64 @@ require_once("html".DIRECTORY_SEPARATOR."header.php"); ?>
 
 <script>
 	$(document).ready(function() {
+      
+		//SCRIPT DO POPOVER DA SENHA
+		$('[data-toggle=popover]').popover({
+			html: true,
+			content: function() {
+	            var content = $(this).attr("data-popover-content");
+	            return $(content).children(".popover-body").html();
+	        }, 
+			trigger: "focus", 
+			placement: "bottom"
+		});
+
+		$( "#senha" ).on("keyup focus",function() {
+			var ucase = new RegExp("[A-Z]+");
+			var num = new RegExp("[0-9]+");
+
+		    if ($('#senha').val().length < 8){
+		    	$("#char8-string").css("color","#EA2027");
+		    	$("#8char").removeClass("fa-check-circle");
+				$("#8char").addClass("fa-times-circle");
+		    } else {
+		    	$("#char8-string").css("color","#009432");
+		    	$("#8char").removeClass("fa-times-circle");
+				$("#8char").addClass("fa-check-circle");
+		    }
+
+		    if (ucase.test($("#senha")[0].value)){
+		    	$("#ucase-string").css("color","#009432");
+		    	$("#uCase").removeClass("fa-times-circle");
+				$("#uCase").addClass("fa-check-circle");
+		    } else {
+				$("#ucase-string").css("color","#EA2027");
+		    	$("#uCase").removeClass("fa-check-circle");
+				$("#uCase").addClass("fa-times-circle");
+		    }
+
+		    if (num.test($("#senha")[0].value)){
+		    	$("#n-string").css("color","#009432");
+		    	$("#nCase").removeClass("fa-times-circle");
+				$("#nCase").addClass("fa-check-circle");	
+		    } else {
+				$("#n-string").css("color","#EA2027");
+		    	$("#nCase").removeClass("fa-check-circle");
+				$("#nCase").addClass("fa-times-circle");			
+		    }
+		});
+
+		$( "#confirmarsenha" ).on("keyup focus",function(){
+			if ($("#senha")[0].value == $("#confirmarsenha")[0].value && $("#senha")[0].value !== ""){
+		    	$("#confirm-password").css("color","#009432");
+		    	$("#pwmatch").removeClass("fa-times-circle");
+				$("#pwmatch").addClass("fa-check-circle");	
+		    } else {
+				$("#confirm-password").css("color","#EA2027");
+		    	$("#pwmatch").removeClass("fa-check-circle");
+				$("#pwmatch").addClass("fa-times-circle");			
+		    }
+		});
 /*
 		$("input[type=password]").keyup(function(){
 			var ucase = new RegExp("[A-Z]+");
@@ -242,36 +301,6 @@ require_once("html".DIRECTORY_SEPARATOR."header.php"); ?>
 	    });  
 
     });
-</script>
-
-<script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
-
-<script>
-	$(document).ready(function () {
-    //SCRIPT DO POPOVER DA SENHA
-		$('[data-toggle=popover]').popover({
-			html: true,
-			content: function() {
-	            var content = $(this).attr("data-popover-content");
-	            return $(content).children(".popover-body").html();
-	        }, 
-			trigger: "focus", 
-			placement: "bottom"
-		});
-
-		$( "#senha" ).on("keyup focus",function() {
-		    if ($('#senha').val().length < 8){
-		    	$(".8char").css("color","#EA2027");
-		    	$("#8char").removeClass("fa-check-circle");
-				$("#8char").addClass("fa-times-circle");
-
-		    } else {
-		    	$(".8char").css("color","#009432");
-		    	$("#8char").removeClass("fa-times-circle");
-				$("#8char").addClass("fa-check-circle");
-		    }
-		});
-	});
 </script>
 
 </html>
