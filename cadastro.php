@@ -139,50 +139,54 @@ require_once("html".DIRECTORY_SEPARATOR."header.php"); ?>
 			placement: "bottom"
 		});
 
-		$( "#senha" ).on("keyup focus",function() {
+		$( "#senha" ).on("focus keyup",function() {
 			var ucase = new RegExp("[A-Z]+");
 			var num = new RegExp("[0-9]+");
+			
+			var id_pop = $(this).attr("aria-describedby");
 
 		    if ($('#senha').val().length < 8){
-		    	$("#char8-string").css("color","#EA2027");
-		    	$("#8char").removeClass("fa-check-circle");
-				$("#8char").addClass("fa-times-circle");
+		    	$("#"+id_pop).find("#char8-string").css("color","#EA2027");
+		    	$("#"+id_pop).find("#8char").removeClass("fa-check-circle");
+				$("#"+id_pop).find("#8char").addClass("fa-times-circle");
 		    } else {
-		    	$("#char8-string").css("color","#009432");
-		    	$("#8char").removeClass("fa-times-circle");
-				$("#8char").addClass("fa-check-circle");
+		    	$("#"+id_pop).find("#char8-string").css("color","#009432");
+		    	$("#"+id_pop).find("#8char").removeClass("fa-times-circle");
+				$("#"+id_pop).find("#8char").addClass("fa-check-circle");
 		    }
 
 		    if (ucase.test($("#senha")[0].value)){
-		    	$("#ucase-string").css("color","#009432");
-		    	$("#uCase").removeClass("fa-times-circle");
-				$("#uCase").addClass("fa-check-circle");
+		    	$("#"+id_pop).find("#ucase-string").css("color","#009432");
+		    	$("#"+id_pop).find("#uCase").removeClass("fa-times-circle");
+				$("#"+id_pop).find("#uCase").addClass("fa-check-circle");
 		    } else {
-				$("#ucase-string").css("color","#EA2027");
-		    	$("#uCase").removeClass("fa-check-circle");
-				$("#uCase").addClass("fa-times-circle");
+				$("#"+id_pop).find("#ucase-string").css("color","#EA2027");
+		    	$("#"+id_pop).find("#uCase").removeClass("fa-check-circle");
+				$("#"+id_pop).find("#uCase").addClass("fa-times-circle");
 		    }
 
 		    if (num.test($("#senha")[0].value)){
-		    	$("#n-string").css("color","#009432");
-		    	$("#nCase").removeClass("fa-times-circle");
-				$("#nCase").addClass("fa-check-circle");	
+		    	$("#"+id_pop).find("#n-string").css("color","#009432");
+		    	$("#"+id_pop).find("#nCase").removeClass("fa-times-circle");
+				$("#"+id_pop).find("#nCase").addClass("fa-check-circle");	
 		    } else {
-				$("#n-string").css("color","#EA2027");
-		    	$("#nCase").removeClass("fa-check-circle");
-				$("#nCase").addClass("fa-times-circle");			
+				$("#"+id_pop).find("#n-string").css("color","#EA2027");
+		    	$("#"+id_pop).find("#nCase").removeClass("fa-check-circle");
+				$("#"+id_pop).find("#nCase").addClass("fa-times-circle");			
 		    }
 		});
 
-		$( "#confirmarsenha" ).on("keyup focus",function(){
+		$( "#confirmarsenha" ).on("input",function(){
+		    var id_pop = $(this).attr("aria-describedby");
+		    
 			if ($("#senha")[0].value == $("#confirmarsenha")[0].value && $("#senha")[0].value !== ""){
-		    	$("#confirm-password").css("color","#009432");
-		    	$("#pwmatch").removeClass("fa-times-circle");
-				$("#pwmatch").addClass("fa-check-circle");	
+		    	$("#"+id_pop).find("#confirm-password").css("color","#009432");
+		    	$("#"+id_pop).find("#pwmatch").removeClass("fa-times-circle");
+				$("#"+id_pop).find("#pwmatch").addClass("fa-check-circle");	
 		    } else {
-				$("#confirm-password").css("color","#EA2027");
-		    	$("#pwmatch").removeClass("fa-check-circle");
-				$("#pwmatch").addClass("fa-times-circle");			
+				$("#"+id_pop).find("#confirm-password").css("color","#EA2027");
+		    	$("#"+id_pop).find("#pwmatch").removeClass("fa-check-circle");
+				$("#"+id_pop).find("#pwmatch").addClass("fa-times-circle");			
 		    }
 		});
 /*

@@ -19,7 +19,7 @@ body {
 	text-align: center;
 	background: transparent url(../img/vilapix_home_landing.png) right no-repeat;
 	background-size: 98% auto;
-	height: 820px;
+	height: 940px;
 }
 
 .container-index .row-intro .row-logo {
@@ -29,12 +29,12 @@ body {
 }
 
 .container-index .row-intro .row-text {
-	font-family: "GoogleSans", "ProductSans", Arial, Helvetica, sans-serif;
 	margin: 0 auto;
-	margin-bottom: 440px;
+	margin-bottom: 590px;
 }
 
 .container-index .row-intro .row-text h1 {
+	font-family: "GoogleSans", "ProductSans", Arial, Helvetica, sans-serif;
     line-height: 1.25;
     font-size: 56px;
     font-weight: 300;
@@ -44,5 +44,58 @@ body {
 	font-family: "GoogleSans", "ProductSans", Arial, Helvetica, sans-serif;
 	font-size: 24px;
 	padding-top: 15px;
+	color: #3c4043;
+}
+
+.container-index .scroll {
+	position: absolute;
+	display: block;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	width: 100%;
+}
+
+.container-index .scroll img {
+	height: 60px;
+    margin: 0 auto;
+    object-fit: contain;
+    width: 100%;
+}
+
+.container-index .row-about-us {
+	text-align: center;
+	width: 100%;
+	margin: 0;
+}
+
+.container-index .row-about-us .row-objetivos {
+	width: 100%;
+	margin: 0;
+}
+
+.container-index .row-about-us .row-objetivos .col {
+	display: block;
+	height: 400px;
+}
+
+.container-index .row-about-us .row-objetivos img {
+	height: 180px;
+    margin: 0 auto;
+    object-fit: contain;
+    width: 100%;
+}
+
+.container-index .row-about-us .row-objetivos h2 {
+	font-family: "GoogleSans", "ProductSans", Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	padding-top: 5px;
+	color: #3c4043;
+}
+
+.container-index .row-about-us .row-objetivos p {
+	font-family: "GoogleSans", "ProductSans", Arial, Helvetica, sans-serif;
+	font-size: 16px;
 	color: #3c4043;
 }
