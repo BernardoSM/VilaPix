@@ -189,58 +189,6 @@ require_once("html".DIRECTORY_SEPARATOR."header.php"); ?>
 				$("#"+id_pop).find("#pwmatch").addClass("fa-times-circle");			
 		    }
 		});
-/*
-		$("input[type=password]").keyup(function(){
-			var ucase = new RegExp("[A-Z]+");
-			var num = new RegExp("[0-9]+");
-
-			if($("#senha").val().length >= 8){
-				$(".popover-body").css("color","#009432");
-				$("#8char").removeClass("fa-times-circle");
-				$("#8char").addClass("fa-check-circle");
-				}else{
-				$(".popover-body").css("color","#EA2027");
-				$("#8char").removeClass("fa-check-circle");
-				$("#8char").addClass("fa-times-circle");
-			}
-
-			if(ucase.test($$("#senha")[0].value)){
-			$$("#ucase").invoke("removeClassName", "glyphicon-remove");
-			$$("#ucase").invoke("addClassName", "glyphicon-ok");
-			$$("#ucase").invoke("setStyle", {color: "#00A41E"});
-			}else{
-			$$("#ucase").invoke("removeClassName", "glyphicon-ok");
-			$$("#ucase").invoke("addClassName", "glyphicon-remove");
-			$$("#ucase").invoke("setStyle", {color: "#FF0004"});
-			}
-
-			if(num.test($$("#senha")[0].value)){
-			$$("#num").invoke("removeClassName", "glyphicon-remove");
-			$$("#num").invoke("addClassName", "glyphicon-ok");
-			$$("#num").invoke("setStyle", {color: "#00A41E"});
-			}else{
-			$$("#num").invoke("removeClassName", "glyphicon-ok");
-			$$("#num").invoke("addClassName", "glyphicon-remove");
-			$$("#num").invoke("setStyle", {color: "#FF0004"});
-			}
-
-			if($$("#senha")[0].value == $$("#confirmarsenha")[0].value && $$("#senha")[0].value !== ""){
-			$$("#pwmatch").invoke("removeClassName", "glyphicon-remove");
-			$$("#pwmatch").invoke("addClassName", "glyphicon-ok");
-			$$("#pwmatch").invoke("setStyle", {color: "#00A41E"});
-			}else{
-			$$("#pwmatch").invoke("removeClassName", "glyphicon-ok");
-			$$("#pwmatch").invoke("addClassName", "glyphicon-remove");
-			$$("#pwmatch").invoke("setStyle", {color: "#FF0004"});
-			}
-
-			if ($$('span.glyphicon-remove').length != 0) {
-			$$('input[type=submit]').disable();
-			} else {
-			$$('input[type=submit]').enable();
-			}
-
-		});*/
 
 		//SCRIPT DO ENDEREÇO AUTOMÁTICO
 		$("#cep").focusout(function(){
